@@ -1,0 +1,20 @@
+{
+  "name": "conversationkit",
+  "version": "1.0.0",
+  "description": "TJ Bot Conversation recipe",
+  "main": "Conversation.js",
+  "scripts": {
+    "start": "node conversation.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:watsonkits/conversationkit.git"
+  },
+  "author": "Mishal Dholakia",
+  "dependencies": {
+    "mic": "^2.1.1",
+    "request": "^2.79.0",
+    "watson-developer-cloud": "^2.23.1"
+  }
+}

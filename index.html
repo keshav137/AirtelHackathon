@@ -1,0 +1,50 @@
+<html>
+<head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    
+		const NaturalLanguageClassifierV1 = require('watson-developer-cloud/natural-language-classifier/v1');
+		const fs = require('fs');
+
+		const natural_language_classifier = new NaturalLanguageClassifierV1({
+		  username: '1c774089-d215-4d51-b657-ddf726a667b7',
+		  password: 'h2o5z4Nh0gro',
+		  version: 'v1'
+		});
+
+		// Creating a classifier
+		const params = {
+		  language: 'en',
+		  name: 'my-classifier',
+		  training_data: fs.createReadStream('@/users/keshavmalhotra/Desktop/trainingdata.csv')
+		};
+
+		natural_language_classifier.create(params, function(err, response) {
+		  if (err) {
+		    console.log(err);
+		  } else {
+		    // copy the classifier_id from the response
+		    console.log(JSON.stringify(response, null, 2));
+		  }
+		});
+
+		// Using a classifier
+		natural_language_classifier.classify(
+		  {
+		    text: 'Is it sunny?',
+		    classifier_id: '<classifier-id>'
+		  }, // from the previous command
+		  function(err, response) {
+		    if (err) {
+		      console.log('error:', err);
+		    } else {
+		      console.log(JSON.stringify(response, null, 2));
+		    }
+		  }
+		);
+    </script>
+    hello
+</body>
+</html>

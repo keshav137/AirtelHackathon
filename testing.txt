@@ -1,0 +1,54 @@
+{
+  "url": "https://gateway.watsonplatform.net/natural-language-classifier/api",
+  "username": "1c774089-d215-4d51-b657-ddf726a667b7",
+  "password": "h2o5z4Nh0gro"
+}
+
+
+curl -i -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" -F training_data=@/users/keshavmalhotra/Desktop/trainingdata2.csv -F training_metadata="{\"language\":\"en\",\"name\":\"TutorialClassifier\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+
+curl -G -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/{90e7acx197-nlc-87560}/classify" --data-urlencode "text=my phone internet is not working"
+
+
+
+DELETE /v1/classifiers/{90e7b4x199-nlc-88410}
+
+curl -X DELETE -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/90e7b4x199-nlc-88410"
+
+
+
+GET /v1/classifiers/{90e7b4x199-nlc-88410}/classify
+
+
+curl -X POST -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" -H "Content-Type:application/json" -d "{\"text\":\"phone internet details?\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/10D41B-nlc-1/classify"
+
+
+
+
+curl -G -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/10D41B-nlc-1/classify?text=How%20hot%20will%20it%20be%20today%3F"
+
+
+
+curl -X POST -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" -H "Content-Type:application/json" -d "{\"text\":\"How hot will it be today?\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/10D41B-nlc-1/classify"
+
+
+
+
+
+curl -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+
+curl -X DELETE -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/90e7b7x198-nlc-87607"
+
+
+
+
+remaining : 90e7b7x198-nlc-87610
+
+
+curl -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+
+curl -u "1c774089-d215-4d51-b657-ddf726a667b7":"h2o5z4Nh0gro"  "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/90e7b4x199-nlc-88587"
+
